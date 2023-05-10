@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-1"
-  profile = "myaws"
+  
 }
 # Create VPC
 resource "aws_vpc" "main" {
