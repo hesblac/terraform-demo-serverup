@@ -34,7 +34,7 @@ pipeline {
             }
         }
         stage('Terraform approval'){
-            when {branch 'master'}
+            when {branch 'production'}
             steps {
 
                 script{
