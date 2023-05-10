@@ -1,12 +1,16 @@
 pipeline {
 
     agent any
-    environment {
-        aws_access_key_id = "aws_access_key_id"
-        aws_secret_access_key = "aws_secret_access_key"
-    }
     stages {
-
+        stage('Example') {
+        steps {
+        withCredentials([usernamePassword(credentialsId: 'my-creds', passwordVariable: 'MY_PASSWORD', usernameVariable: 'MY_USERNAME')]) {
+          // set the environment variables on the machine
+          sh 'echo "export MY_USERNAME=${MY_USERNAME}" >> ~/.bashrc'
+          sh 'echo "export MY_PASSWORD=${MY_PASSWORD}" >> ~/.bashrc'
+          sh 'source ~/.bashrc'
+        }
+        }
         stage('git checkout'){
             
             steps {
