@@ -4,16 +4,11 @@ pipeline {
 
     stages {
 
-        // stage('git checkout'){
-
-        //     steps{
-
-        //         script{
-
-
-        //         }
-        //     }
-        // }
+       stage('git checkout'){
+            
+            steps {
+                git branch: 'main', url: 'https://github.com/hesblac/terraform-demo-serverup.git'
+            }
         stage('Terraform init'){
 
             steps {
