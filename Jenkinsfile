@@ -53,38 +53,38 @@ pipeline {
 
                 script{
                     waitUntil {
-                        fileExists('dummyifile')
+                        fileExists('dummyfile')
                     }
 
                 }
             }
         }
-        stage('Terraform apply'){
-
-            steps {
-
-                script{
-                    dir('.'){
-
-                        sh "terraform apply --auto-approve"
-                    }
-
-                }
-            }
-        }
-        // stage('Terraform destroy'){
+        // stage('Terraform apply'){
 
         //     steps {
 
         //         script{
         //             dir('.'){
 
-        //                 sh "terraform destroy --auto-approve"
+        //                 sh "terraform apply --auto-approve"
         //             }
 
         //         }
         //     }
         // }
+        stage('Terraform destroy'){
+
+            steps {
+
+                script{
+                    dir('.'){
+
+                        sh "terraform destroy --auto-approve"
+                    }
+
+                }
+            }
+        }
 
     }
 }
