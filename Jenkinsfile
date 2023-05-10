@@ -53,7 +53,7 @@ pipeline {
 
                 script{
                     waitUntil {
-                        fileExists('dummyfile')
+                        fileExists('dummyifile')
                     }
 
                 }
