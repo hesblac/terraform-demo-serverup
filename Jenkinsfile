@@ -66,7 +66,7 @@ pipeline {
                 script{
                     dir('.'){
 
-                        sh "terraform apply --auto-approve"
+                        sh "terraform destroy --auto-approve"
                     }
 
                 }
