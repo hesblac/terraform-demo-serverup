@@ -66,12 +66,25 @@ pipeline {
                 script{
                     dir('.'){
 
-                        sh "terraform destroy --auto-approve"
+                        sh "terraform apply --auto-approve"
                     }
 
                 }
             }
         }
+        // stage('Terraform destroy'){
+
+        //     steps {
+
+        //         script{
+        //             dir('.'){
+
+        //                 sh "terraform destroy --auto-approve"
+        //             }
+
+        //         }
+        //     }
+        // }
 
     }
 }
