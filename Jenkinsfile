@@ -13,7 +13,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/hesblac/terraform-demo-serverup.git'
             }
         }
-        stage(add aws auth){
+        stage('add aws auth'){
 
             steps{
                 sh """
