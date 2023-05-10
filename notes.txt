@@ -1,0 +1,59 @@
+notes
+
+
+
+create a git repository and its repective brances
+develop the terraform code
+develop the jenkins pipeline code
+-    there is a need for a jenkinsfile per brances
+setup jenkins pipline job
+-   need jenkins job per branch
+poll each branch & trigger respective pipeline job (commit/merge)
+
+develop single jenkinsfile, with conditional stages
+use jenkins multi-branch pipeline to automate pipeline job creation.
+
+
+the approval will only be on DEV and PRO pipeline
+
+
+create jenkins server
+
+put our jenkinsfile and terraform file in the repos with 3 brnches
+ 
+
+ ======================================
+setup Gitlab Web hooks
+
+    install gitlab plugin in jenkins
+    generate gitlab user token
+    add gitlab token in jenkins
+    create webhook
+
+git lab repos
+    DEV,PROD, = branches
+    terraform code
+    jenkinsfile
+setup jenkins multibranch pipeline job.
+ ######################################
+
+
+tasks:
+create a server with jenkins and terraform, 
+integrate the webhook of gitlab or git with jenkins.
+get token for github or gitlab auth
+download git and gitlab plugins 
+set up token configuration on jenkins
+write the terraform script:
+deploy any aws infa
+use multibranch so the branches have projects 
+and the master branch or production always require approval
+by the creation of a dummyfile before the the pipeline will apply the 
+particular stage and apply cokmmand is sent and used
+
+
+usage:
+jenkins
+terraform
+aws infra code
+git/gitlab
